@@ -6,24 +6,23 @@ const FORMULA_TEMPLATE = `
 # frozen_string_literal: true
 
 class Dnsproxy < Formula
-    desc ""
-    homepage "https://github.com/AdguardTeam/dnsproxy"
-    version "{{VERSION}}"
-    depends_on :macos
-  
-    if Hardware::CPU.intel?
-      url "{{AMD64_URL}}"
-  
-      def install
-        bin.install "dnsproxy"
-      end
+  desc ""
+  homepage "https://github.com/AdguardTeam/dnsproxy"
+  version "{{VERSION}}"
+  depends_on :macos
+
+  if Hardware::CPU.intel?
+    url "{{AMD64_URL}}"
+
+    def install
+      bin.install "dnsproxy"
     end
-    if Hardware::CPU.arm?
-      url "{{ARM64_URL}}"
-  
-      def install
-        bin.install "dnsproxy"
-      end
+  end
+  if Hardware::CPU.arm?
+    url "{{ARM64_URL}}"
+
+    def install
+      bin.install "dnsproxy"
     end
   end
 end
