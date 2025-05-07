@@ -5,18 +5,18 @@
 class Dnsproxy < Formula
   desc ""
   homepage "https://github.com/AdguardTeam/dnsproxy"
-  version "v0.75.3"
+  version "v0.75.4"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/AdguardTeam/dnsproxy/releases/download/v0.75.3/dnsproxy-darwin-amd64-v0.75.3.tar.gz"
+    url "https://github.com/AdguardTeam/dnsproxy/releases/download/v0.75.4/dnsproxy-darwin-amd64-v0.75.4.tar.gz"
 
     def install
       bin.install "dnsproxy"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/AdguardTeam/dnsproxy/releases/download/v0.75.3/dnsproxy-darwin-arm64-v0.75.3.tar.gz"
+    url "https://github.com/AdguardTeam/dnsproxy/releases/download/v0.75.4/dnsproxy-darwin-arm64-v0.75.4.tar.gz"
 
     def install
       bin.install "dnsproxy"
